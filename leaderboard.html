@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenStride Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gsstyle.css') }}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>🌱 GreenStride 🌼</h1>
+
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/activity">Activities</a></li>
+            <li><a href="/impact">Impact</a></li>
+            <li><a href="/suggestions">Suggestions</a></li>
+            <li><a href="/inspiration">Inspiration</a></li>
+            <li><a href="/leaderboard">Leaderboard</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="dashboard">
+
+    <h2 class="dashboard-title">🏆 Eco Leaderboard</h2>
+
+    <div class="activities">
+
+        <h2>Most Performed Activities</h2>
+
+        {% for row in leaderboard_data %}
+
+        <div class="activity-item">
+
+            <span class="activity-name">
+                {{ row[0] }}
+            </span>
+
+            <span class="points">
+                {{ row[1] }} Times
+            </span>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="page-navigation">
+        <a href="/inspiration" class="nav-btn">⬅ Inspiration</a>
+        <a href="/dashboard" class="nav-btn">Dashboard ➡</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 GreenStride. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

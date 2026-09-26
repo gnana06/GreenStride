@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Impact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gsstyle.css') }}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>🌱 GreenStride 🌼</h1>
+
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/activity">Activities</a></li>
+            <li><a href="/impact">Impact</a></li>
+            <li><a href="/suggestions">Suggestions</a></li>
+            <li><a href="/inspiration">Inspiration</a></li>
+            <li><a href="/leaderboard">Leaderboard</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="dashboard">
+
+    <h2 class="dashboard-title">🌍 Your Environmental Impact</h2>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>📋 Total Activities</h3>
+            <p>{{ total_activities }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>👥 Total Users</h3>
+            <p>{{ total_users }}</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🌳 Trees Planted</h3>
+            <p>12</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🚲 Bicycle Trips</h3>
+            <p>25</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>💧 Water Saved</h3>
+            <p>850 L</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>♻️ Waste Recycled</h3>
+            <p>40 kg</p>
+        </div>
+
+    </div>
+
+    <div class="activities">
+
+        <h2>Estimated Impact</h2>
+
+        <div class="activity-item">
+            <span class="activity-name">🌍 CO₂ Emissions Reduced</span>
+            <span class="points">120 kg</span>
+        </div>
+
+        <div class="activity-item">
+            <span class="activity-name">🛍 Plastic Bags Avoided</span>
+            <span class="points">60</span>
+        </div>
+
+        <div class="activity-item">
+            <span class="activity-name">🌱 Sustainability Score</span>
+            <span class="points">89%</span>
+        </div>
+
+    </div>
+
+    <div class="page-navigation">
+        <a href="/activity" class="nav-btn">⬅ Previous</a>
+        <a href="/suggestions" class="nav-btn">Next ➡</a>
+    </div>
+
+</div>
+
+</body>
+</html>

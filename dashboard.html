@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenStride Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='gsstyle.css') }}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>🌱 GreenStride Dashboard 🌼</h1>
+
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/activity">Activities</a></li>
+    <li><a href="/impact">Impact</a></li>
+    <li><a href="/suggestions">Suggestions</a></li>
+    <li><a href="/inspiration">Inspiration</a></li>
+    <li><a href="/leaderboard">Leaderboard</a></li>
+</ul>
+    </nav>
+</header>
+
+<div class="dashboard">
+
+    <h2 class="dashboard-title">Welcome Back! 🌱</h2>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>🌱 Eco Score</h3>
+            <p>245</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🔥 Current Streak</h3>
+            <p>7</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🏆 Badges Earned</h3>
+            <p>4</p>
+        </div>
+
+    </div>
+
+    <div class="activities">
+
+        <h2>Recent Activities</h2>
+
+        <div class="activity-item">
+            <span class="activity-name">🚶 Walked to College</span>
+            <span class="points">+10</span>
+        </div>
+
+        <div class="activity-item">
+            <span class="activity-name">♻️ Recycled Waste</span>
+            <span class="points">+15</span>
+        </div>
+
+        <div class="activity-item">
+            <span class="activity-name">💧 Saved Water</span>
+            <span class="points">+10</span>
+        </div>
+
+        <div class="activity-item">
+            <span class="activity-name">🚲 Used Bicycle</span>
+            <span class="points">+20</span>
+        </div>
+
+        <div class="activity-item">
+            <span class="activity-name">🌱 Planted a Tree</span>
+            <span class="points">+50</span>
+        </div>
+
+     </div>
+
+</div>
+
+<div class="page-navigation">
+    <a href="/" class="nav-btn">⬅ Home</a>
+    <a href="/activity" class="nav-btn">Activities ➡</a>
+</div>
+
+<footer>
+    <p>© 2026 GreenStride. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

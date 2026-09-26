@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenStride Activities</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gsstyle.css') }}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>🌱 GreenStride 🌼</h1>
+
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/activity">Activities</a></li>
+            <li><a href="/impact">Impact</a></li>
+            <li><a href="/suggestions">Suggestions</a></li>
+            <li><a href="/inspiration">Inspiration</a></li>
+            <li><a href="/leaderboard">Leaderboard</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="activity-container">
+
+    <h2>Add Today's Green Activity 🌍</h2>
+
+    <form method="POST">
+
+        <label>Select Activity</label>
+
+        <select name="activity">
+            <option>🚲 Used Bicycle</option>
+            <option>🚶 Walked Instead of Vehicle</option>
+            <option>♻️ Recycled Waste</option>
+            <option>💧 Saved Water</option>
+            <option>🌳 Planted a Tree</option>
+            <option>🛍 Avoided Plastic Bag</option>
+            <option>🔌 Saved Electricity</option>
+        </select>
+
+        <label>Description</label>
+
+        <input type="text"
+               name="description"
+               placeholder="Describe your activity">
+
+        <label>Date</label>
+
+        <input type="date" name="date">
+
+        <button type="submit">
+            Add Activity
+        </button>
+
+    </form>
+
+    <div class="activity-history">
+
+        <h3>Recent Activities</h3>
+
+        {% for activity in activities %}
+        <div class="activity-item">
+
+            <span class="activity-name">
+                {{ activity[1] }}
+            </span>
+
+            <span class="points">
+                {{ activity[2] }}
+            </span>
+
+            <a href="/delete/{{ activity[0] }}" class="delete-btn">
+                🗑 Delete
+            </a>
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<div class="page-navigation">
+    <a href="/dashboard" class="nav-btn">⬅ Dashboard</a>
+    <a href="/impact" class="nav-btn">Impact ➡</a>
+</div>
+
+<footer>
+    <p>© 2026 GreenStride. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
